@@ -33,15 +33,13 @@ rm -rf ~/.verium/blk0001.dat
 mv ~/verium/bootstrap/blk0001.dat ~/.verium/blk0001.dat
 mv ~/verium/bootstrap/txleveldb ~/.verium/txleveldb
 sleep 5
-echo -e "\e[92mVerium Guide 9/10: \e[93mBlockchain update complete, restarting wallet, wait 1 min\e[39m"
+echo -e "\e[92mVerium Guide 9/10: \e[93mBlockchain update complete, restarting wallet, wait 2 min\e[39m"
 ~/verium/wallet/src/veriumd
-sleep 60
+sleep 120
 echo -e "\e[92mVerium Guide 10/10: \e[93mto get info use ~/verium/wallet/src/veriumd getinfo\e[39m" 
 ~/verium/wallet/src/veriumd getinfo
-sleep 20
 echo -e "\e[92mVerium Guide 10/10: \e[93mYour wallets address is:\e[39m"
 ~/verium/wallet/src/veriumd getaddressesbyaccount ""
-sleep 20
 echo -e "\e[92mVerium Guide 10/10: \e[93mCopy it for your miners to use\n"
 echo -e "\e[92mWelcome to Verium! \e[35m :)"
 echo -e "\e[34m      __"
