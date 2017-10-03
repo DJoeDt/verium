@@ -9,7 +9,7 @@ git clone https://github.com/VeriumReserve/verium ~/verium/wallet
 cd ~/verium/wallet/src
 echo -e "\e[92mVerium Guide 4/10: \e[93mCompile the wallet using make\e[39m"
 make -f makefile.unix
-echo -e "\e[92mVerium Guide 5/10: \e[93mWriting configuration file, edit by nano ~/verium/wallet/src/verium.conf\e[39m"
+echo -e "\e[92mVerium Guide 5/10: \e[93mDownload nodes and write configuration file, edit by nano ~/verium/wallet/src/verium.conf\e[39m"
 wget https://www.vericoin.info/downloads/verium.conf
 echo "server=1" >> ~/verium/wallet/src/verium.conf
 echo "listen=1" >> ~/verium/wallet/src/verium.conf
