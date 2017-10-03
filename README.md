@@ -14,6 +14,6 @@ How to use:
 
   ./install_Verium_Wallet.sh
 
-# NOT working yet install_Verium_Miner.sh
+# install_Verium_Miner.sh
   is a shell script that automatically installs the Verium Miner on a Raspberry Pi 3 or similar ARM SBCs.
 
