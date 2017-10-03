@@ -1,5 +1,4 @@
-# verium
-Verium Help Files
+# Verium Help Files
 
 Check out my Wiki Guide.
 
