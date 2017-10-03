@@ -3,7 +3,7 @@ Verium Help Files
 
 Check out my Wiki Guide.
 
-# install_Verium_wallet.sh
+# install_Verium_Wallet.sh
   is a shell script that automatically installs the Verium Wallet on a Linux machine.
 
 How to use:
