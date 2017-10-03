@@ -4,7 +4,7 @@ echo -e "\e[92mVerium Guide 2/10: \e[93mInstall dependencies\e[39m"
 sudo apt-get install unzip build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libboost-all-dev libqrencode-dev freeglut3-dev git build-essential automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev -y
 echo -e "\e[92mVerium Guide 3/10: \e[93mCreating verium directory\e[39m"
 mkdir ~/verium
-echo -e "\e[92mVerium Guide 3/10: \e[93mClone wallet source code into ~/erium/wallet\e[39m"
+echo -e "\e[92mVerium Guide 3/10: \e[93mClone wallet source code into ~/verium/wallet\e[39m"
 git clone https://github.com/VeriumReserve/verium ~/verium/wallet
 cd ~/verium/wallet/src
 echo -e "\e[92mVerium Guide 4/10: \e[93mCompile the wallet using make\e[39m"
@@ -44,4 +44,15 @@ echo -e "\e[92mVerium Guide 10/10: \e[93mYour wallets address is:\e[39m"
 sleep 20
 echo -e "\e[92mVerium Guide 10/10: \e[93mCopy it for your miners to use\n"
 echo -e "\e[92mWelcome to Verium! \e[35m :)"
+echo -e "\e[34m      __"
+echo "  _  /  \  _"
+echo " /| (    ) |\"
+echo "( (  \  /  ) )"
+echo " \ \  \/  / /"
+echo "  \ \    / /"
+echo "   \ \  / /"
+echo "    \ -- /"
+echo "     \  /"
+echo "      --"
+echo "  V E R I U M"
 echo -e "\e[39m"
