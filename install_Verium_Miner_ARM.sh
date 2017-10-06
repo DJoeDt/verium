@@ -13,7 +13,7 @@ sed -i -e 's/#define scrypt_best_throughput() 3/#define scrypt_best_throughput()
 sed -i -e 's/void scrypt_core_3way/void scrypt_core /g' ~/verium/miner/algo/scrypt.c
 sed -i -e 's/-DUSE_ASM -pg/-DUSE_ASM -mfpu=neon -pg/g' ~/verium/miner/build.sh
 echo -e "\e[92mVerium Guide 4/6: \e[93mCompile the miner using build\e[39m"
-cd veriumMiner
+cd verium/miner
 ./build.sh
 echo -e "\e[92mVerium Guide 5/6: \e[93mMiner built.\e[39m"
 echo -e "\e[92mVerium Guide 6/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
