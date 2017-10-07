@@ -19,7 +19,7 @@ echo -e "\e[92mNow get \e[91myour wallets address \e[93mhit Ctrl+Cand mine for y
 echo -e "\e[92mHappy Verium Mining! \e[35m :)"
 echo -e "\e[34m      __"
 echo -e "  _  /  \  _"
-echo -e " /| (    ) |\"
+echo -e ' /| (    ) |\ '
 echo -e "( (  \  /  ) )"
 echo -e " \ \  \/  / /"
 echo -e "  \ \    / /"
