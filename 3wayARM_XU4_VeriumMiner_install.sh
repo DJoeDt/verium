@@ -4,12 +4,12 @@ echo -e "\e[92mVerium Guide 2/6: \e[93mInstall dependencies\e[39m"
 sudo apt-get install git automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev -y
 echo -e "\e[92mVerium Guide 3/6: \e[93mCreating verium directory\e[39m"
 mkdir ~/verium
-echo -e "\e[92mVerium Guide 3/6: \e[93mClone miner source code into ~/verium/miner\e[39m"
-git clone https://github.com/effectsToCause/veriumMiner ~/verium/miner
+echo -e "\e[92mVerium Guide 3/6: \e[93mClone miner source code into ~/verium/3wayminer\e[39m"
+git clone https://github.com/effectsToCause/veriumMiner ~/verium/3wayminer
 echo -e "\e[92mVerium Guide 4/6: \e[93mConfigure 3way Algorithm neon\e[39m"
-sed -i -e 's/-DUSE_ASM -pg/-DUSE_ASM -mfpu=neon -pg/g' ~/verium/miner/build.sh
+sed -i -e 's/-DUSE_ASM -pg/-DUSE_ASM -mfpu=neon -pg/g' ~/verium/3wayminer/build.sh
 echo -e "\e[92mVerium Guide 4/6: \e[93mCompile the miner using build\e[39m"
-cd verium/miner
+cd verium/3wayminer
 ./build.sh
 echo -e "\e[92mVerium Guide 5/6: \e[93mMiner built.\e[39m"
 echo -e "\e[92mVerium Guide 6/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
