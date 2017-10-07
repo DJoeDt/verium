@@ -13,11 +13,9 @@ cd verium/3wayminer
 ./build.sh
 echo -e "\e[92mVerium Guide 5/6: \e[93mMiner built.\e[39m"
 echo -e "\e[92mVerium Guide 6/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
-./cpuminer -o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.Guide -p GuidePwd -t 3 --cpu-priority 4 --cpu-affinity 0x00FF
-sleep 20
 echo -e "\e[91mALL YOUR HASHES ARE BELONG TO US!!11 ;)\e[39m"
-sleep 10
-echo -e "\e[92mNow get \e[91myour wallets address \e[93mand mine for yourself!\n\e[39m"
+echo -e "\e[92mNow get \e[91myour wallets address \e[93mhit Ctrl+Cand mine for yourself!\n\e[39m"
+./cpuminer -o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.Guide -p GuidePwd -t 3 --cpu-priority 4 --cpu-affinity 0x00FF
 echo -e "\e[92mHappy Verium Mining! \e[35m :)"
 echo -e "\e[34m      __"
 echo -e "  _  /  \  _"
