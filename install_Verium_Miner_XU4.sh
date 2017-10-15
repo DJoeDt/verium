@@ -54,10 +54,7 @@ echo "devices/platform/11800000.mali\:/devfreq/11800000.mali\:/governor = powers
 echo -e "\e[92mXU4 Guide 2/ : \e[93mStarting the service" 
 echo "$: service sysfsutils start"
 service sysfsutils start
-mkdir ~/tmpmnt
-sudo mount /dev/disk/by-label/boot ~/tmpmnt
+/media/boot/boot.ini
 # TODO: add setenv ddr_freq 933
 echo "edit ~/tmpmnt/boot.ini"
-sudo umount ~/tmpmnt
-rmdir ~/tmpmnt
 echo -e "\e[39m"
