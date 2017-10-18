@@ -32,6 +32,12 @@ echo "devices/platform/11800000.mali\:/devfreq/11800000.mali\:/governor = powers
 echo -e "\e[92mXU4 Guide 2/ : \e[93mStarting the service" 
 echo "$: service sysfsutils start"
 service sysfsutils start
+echo -e "\e[92mXU4 Guide 3/ : \e[93mCreating swap file" 
+sudo fallocate -l 1G /var/swapfile
+sudo chmod 600 /var/swapfile
+sudo mkswap /var/swapfile
+sudo swapon /var/swapfile
+sudo echo "/var/swapfile    none    swap    sw    0    0" >> /etc/fstab
 echo "sudo nano somewhere/boot.ini"
 echo "# TODO: setenv ddr_freq 933"
 echo -e "\e[92mVerium Guide 6/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
