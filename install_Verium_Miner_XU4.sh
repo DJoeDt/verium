@@ -35,7 +35,7 @@ echo -e "  V E R I U M"
 # XU4 Specials
 echo -e "\e[92mXU4 Guide 1/ : \e[93m Downclocking (yes, down!) the XU4 CPU Install utility  \e[39m"
 echo "sudo apt-get install cpufrequtils -y"
-sudo apt-get install cpufrequtils
+sudo apt-get install cpufrequtils -y
 echo -e "\e[92mXU4 Guide 1/ : \e[93m Downclock to 1.9GHz \e[39m"
 echo "$: sudo cpufreq-set -c 7 -u 1.9GHz -r"
 sudo cpufreq-set -c 7 -u 1.9GHz -r
@@ -45,7 +45,7 @@ sudo echo 'MAX_SPEED=1900000' >> /etc/default/cpufrequtils
 sudo echo 'MIN_SPEED=1900000' >> /etc/default/cpufrequtils
 echo -e "\e[92mXU4 Guide 2/ : \e[93m Downclocking the XU4 GPU \e[39m"
 echo "$: sudo apt-get install sysfsutils -y"
-sudo apt-get install sysfsutils
+sudo apt-get install sysfsutils -y
 echo -e "\e[92mXU4 Guide 2/ : \e[93mConfigure sysfs.conf to powersave"
 echo "# Put GPU into powersave mode (= Downclocking it)"  >>  /etc/sysfs.conf
 echo "devices/platform/11800000.mali\:/devfreq/11800000.mali\:/governor = powersave" >>  /etc/sysfs.conf
