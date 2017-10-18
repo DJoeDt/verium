@@ -12,22 +12,6 @@ echo -e "\e[92mVerium Guide 4/6: \e[93mCompile the miner using build\e[39m"
 cd verium/3wayminer
 ./build.sh
 echo -e "\e[92mVerium Guide 5/6: \e[93mMiner built.\e[39m"
-echo -e "\e[92mVerium Guide 6/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
-echo -e "\e[91mALL YOUR HASHES ARE BELONG TO US!!11 ;)\e[39m"
-echo -e "\e[92mNow get \e[91myour wallets address \e[93mhit Ctrl+Cand mine for yourself!\n\e[39m"
-./cpuminer -o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.Guide -p GuidePwd -t 3 --cpu-priority 4 --cpu-affinity 0x00FF
-echo -e "\e[92mHappy Verium Mining! \e[35m :)"
-echo -e "\e[34m      __"
-echo -e "  _  /  \  _"
-echo -e ' /| (    ) |\ '
-echo -e "( (  \  /  ) )"
-echo -e " \ \  \/  / /"
-echo -e "  \ \    / /"
-echo -e "   \ \  / /"
-echo -e "    \ -- /"
-echo -e "     \  /"
-echo -e "      --"
-echo -e "  V E R I U M"
 # XU4 Specials
 echo -e "\e[92mXU4 Guide 1/ : \e[93m Downclocking (yes, down!) the XU4 CPU Install utility  \e[39m"
 echo "sudo apt-get install cpufrequtils"
@@ -50,4 +34,20 @@ echo "$: service sysfsutils start"
 service sysfsutils start
 echo "sudo nano somewhere/boot.ini"
 echo "# TODO: setenv ddr_freq 933"
+echo -e "\e[92mVerium Guide 6/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
+echo -e "\e[91mALL YOUR HASHES ARE BELONG TO US!!11 ;)\e[39m"
+echo -e "\e[92mNow get \e[91myour wallets address \e[93mhit Ctrl+Cand mine for yourself!\n\e[39m"
+./cpuminer -o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.Guide -p GuidePwd -t 3 --cpu-priority 4 --cpu-affinity 0x00FF
+echo -e "\e[92mHappy Verium Mining! \e[35m :)"
+echo -e "\e[34m      __"
+echo -e "  _  /  \  _"
+echo -e ' /| (    ) |\ '
+echo -e "( (  \  /  ) )"
+echo -e " \ \  \/  / /"
+echo -e "  \ \    / /"
+echo -e "   \ \  / /"
+echo -e "    \ -- /"
+echo -e "     \  /"
+echo -e "      --"
+echo -e "  V E R I U M"
 echo -e "\e[39m"
