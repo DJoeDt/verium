@@ -1,7 +1,7 @@
 echo -e "\e[92mVerium Guide 1/6: \e[93mUpdate & Upgrade System\e[39m"
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -f -y
 echo -e "\e[92mVerium Guide 2/6: \e[93mInstall dependencies\e[39m"
-sudo apt-get install git automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev -y
+sudo apt-get install git make automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev -y
 echo -e "\e[92mVerium Guide 3/6: \e[93mCreating verium directory\e[39m"
 mkdir ~/verium
 echo -e "\e[92mVerium Guide 3/6: \e[93mClone miner source code into ~/verium/1wayminer\e[39m"
