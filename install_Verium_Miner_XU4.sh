@@ -17,11 +17,9 @@ cd verium/1wayminer
 ./build.sh
 echo -e "\e[92mVerium Guide 5/6: \e[93mMiner built.\e[39m"
 echo -e "\e[92mVerium Guide 6/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
-./cpuminer -o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.Guide -p GuidePwd -t 4
-sleep 20
 echo -e "\e[91mALL YOUR HASHES ARE BELONG TO US!!11 ;)\e[39m"
-sleep 10
-echo -e "\e[92mNow get \e[91myour wallets address \e[93mand mine for yourself!\n\e[39m"
+echo -e "\e[92mNow Ctrl+C, get \e[91myour wallets address \e[93mand mine for yourself!\n\e[39m"
+./cpuminer -o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.Guide -p GuidePwd
 echo -e "\e[92mHappy Verium Mining! \e[35m :)"
 echo -e "\e[34m      __"
 echo -e "  _  /  \  _"
@@ -38,20 +36,20 @@ echo -e "  V E R I U M"
 echo -e "\e[92mXU4 Guide 1/ : \e[93m Downclocking (yes, down!) the XU4 CPU Install utility  \e[39m"
 echo "sudo apt-get install cpufrequtils"
 sudo apt-get install cpufrequtils
-echo -e "\e[92mXU4 Guide 1/ : \e[93m Downclock to 1.9GHz "
+echo -e "\e[92mXU4 Guide 1/ : \e[93m Downclock to 1.9GHz \e[39m"
 echo "$: sudo cpufreq-set -c 7 -u 1.9GHz -r"
 sudo cpufreq-set -c 7 -u 1.9GHz -r
 sudo echo 'ENABLE="true"' > /etc/default/cpufrequtils
 sudo echo 'GOVERNOR="performance"' >> /etc/default/cpufrequtils
 sudo echo 'MAX_SPEED=1900000' >> /etc/default/cpufrequtils
 sudo echo 'MIN_SPEED=1900000' >> /etc/default/cpufrequtils
-echo -e "\e[92mXU4 Guide 2/ : \e[93m Downclocking the XU4 GPU"
-echo "$: sudo apt-get install sysfsutils"
+echo -e "\e[92mXU4 Guide 2/ : \e[93m Downclocking the XU4 GPU \e[39m"
+echo "$: sudo apt-get install sysfsutils -y"
 sudo apt-get install sysfsutils
 echo -e "\e[92mXU4 Guide 2/ : \e[93mConfigure sysfs.conf to powersave"
 echo "# Put GPU into powersave mode (= Downclocking it)"  >>  /etc/sysfs.conf
 echo "devices/platform/11800000.mali\:/devfreq/11800000.mali\:/governor = powersave" >>  /etc/sysfs.conf
-echo -e "\e[92mXU4 Guide 2/ : \e[93mStarting the service" 
+echo -e "\e[92mXU4 Guide 2/ : \e[93mStarting the service\e[39m" 
 echo "$: service sysfsutils start"
 service sysfsutils start
 echo "sudo nano /media/boot/boot.ini"
