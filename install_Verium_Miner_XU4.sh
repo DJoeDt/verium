@@ -34,7 +34,7 @@ echo -e "      --"
 echo -e "  V E R I U M"
 # XU4 Specials
 echo -e "\e[92mXU4 Guide 1/ : \e[93m Downclocking (yes, down!) the XU4 CPU Install utility  \e[39m"
-echo "sudo apt-get install cpufrequtils"
+echo "sudo apt-get install cpufrequtils -y"
 sudo apt-get install cpufrequtils
 echo -e "\e[92mXU4 Guide 1/ : \e[93m Downclock to 1.9GHz \e[39m"
 echo "$: sudo cpufreq-set -c 7 -u 1.9GHz -r"
