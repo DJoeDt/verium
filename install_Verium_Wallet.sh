@@ -55,3 +55,5 @@ echo "     \  /"
 echo "      --"
 echo "  V E R I U M"
 echo -e "\e[39m"
+echo "PS.: In case you see ERRORS like -No such file... - it actually helps to run the script again since probably the installation of the dependencies failed"
+
