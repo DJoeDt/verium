@@ -1,7 +1,7 @@
 echo -e "\e[92mVerium Guide 1/10: \e[93mUpdate & Upgrade System\e[39m"
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -f -y
 echo -e "\e[92mVerium Guide 2/10: \e[93mInstall dependencies\e[39m"
-sudo apt-get install unzip build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libboost-all-dev libqrencode-dev freeglut3-dev git build-essential automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev -y
+sudo apt-get install libminizip-dev libcurl4-openssl-dev unzip build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libminiupnpc-dev libboost-all-dev libqrencode-dev freeglut3-dev git build-essential automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev -y
 echo -e "\e[92mVerium Guide 3/10: \e[93mCreating verium directory\e[39m"
 mkdir ~/verium
 echo -e "\e[92mVerium Guide 3/10: \e[93mClone wallet source code into ~/verium/wallet\e[39m"
