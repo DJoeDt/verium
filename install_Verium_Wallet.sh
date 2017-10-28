@@ -21,25 +21,14 @@ echo "rpcallowip=localhost" >> ~/verium/wallet/src/verium.conf
 ~/verium/wallet/src/veriumd
 echo -e "\e[92mVerium Guide 5/10: \e[93mGenerating Wallet. Wait 1 min\e[39m"
 sleep 60
-echo -e "\e[92mVerium Guide 6/10: \e[93mWallet generated, stopping it for now...\e[39m"
-~/verium/wallet/src/veriumd stop
-sleep 10
-echo -e "\e[92mVerium Guide 7/10: \e[93mDirectly download the Blockchain for speed up...\e[39m"
-wget -O ~/verium/bootstrap_VRM.zip http://www.vericoin.info/downloads/bootstrap_VRM.zip
-cd ~/verium
-echo -e "\e[92mVerium Guide 8/10: \e[93munzip and install the Blockchain...\e[39m"
-unzip bootstrap_VRM.zip
-rm -rf ~/.verium/txleveldb
-rm -rf ~/.verium/blk0001.dat
-mv ~/verium/bootstrap/blk0001.dat ~/.verium/blk0001.dat
-mv ~/verium/bootstrap/txleveldb ~/.verium/txleveldb
-sleep 5
-echo -e "\e[92mVerium Guide 9/10: \e[93mBlockchain update complete, restarting wallet, wait 2 min\e[39m"
+echo -e "\e[92mVerium Guide 6/10: \e[93mDirectly download the Blockchain for speed up...\e[39m"
+./veriumd bootstrap false
+echo -e "\e[92mVerium Guide 7/10: \e[93mBlockchain update complete, restarting wallet, wait 2 min\e[39m"
 ~/verium/wallet/src/veriumd
 sleep 120
-echo -e "\e[92mVerium Guide 10/10: \e[93mto get info use ~/verium/wallet/src/veriumd getinfo\e[39m" 
+echo -e "\e[92mVerium Guide 8/10: \e[93mto get info use ~/verium/wallet/src/veriumd getinfo\e[39m" 
 ~/verium/wallet/src/veriumd getinfo
-echo -e "\e[92mVerium Guide 10/10: \e[93mYour wallets address is:\e[39m"
+echo -e "\e[92mVerium Guide 9/10: \e[93mYour wallets address is:\e[39m"
 ~/verium/wallet/src/veriumd getaddressesbyaccount ""
 echo -e "\e[92mVerium Guide 10/10: \e[93mCopy it for your miners to use\n"
 echo -e "\e[92mWelcome to Verium! \e[35m :)"
@@ -53,7 +42,7 @@ echo "   \ \  / /"
 echo "    \ -- /"
 echo "     \  /"
 echo "      --"
-echo "  V E R I U M"
+echo -e "  \e[37mV \e[94mE R \e[34mI U \e[90mM"
 echo -e "\e[39m"
 echo "PS.: In case you see ERRORS like -No such file... - it actually helps to run the script again since probably the installation of the dependencies failed"
 
