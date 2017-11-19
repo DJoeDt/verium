@@ -33,9 +33,9 @@ echo "In /media/boot/boot.ini setenv ddr_freq 933"
 sed -i -e 's/setenv ddr_freq 825/setenv ddr_freq 933/g' /media/boot/boot.ini
 sed -i -e 's/exit 0//g' /etc/rc.local
 echo "nice --15 /root/verium/3wayminer/cpuminer -o stratum+tcp://stratum.beertendr.com:3334 -O joe_rondx.111:x --cpu-priority 4 -t 2 --cpu-affinity 0x00F0 --api-bind 0.0.0.0:4048 --no-color >> /root/verium/3wayminer/mine.log &" >> /etc/rc.local
-echo " " >> /etc/rc.local
+echo "" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
-echo " " >> /etc/rc.local
+echo "" >> /etc/rc.local
 echo -e "\e[92mVerium Guide 6/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
 echo -e "\e[91mALL YOUR HASHES ARE BELONG TO US!!11 ;)\e[39m"
 echo -e "\e[92mNow get \e[91myour wallets address \e[93mhit Ctrl+Cand mine for yourself!\n\e[39m"
@@ -51,5 +51,5 @@ echo -e "   \ \  / /"
 echo -e "    \ -- /"
 echo -e "     \  /"
 echo -e "      --"
-echo -e "  \e[37mV \e[94mE R \e[34mI U \e[90mM"
+echo -e " \e[37mV \e[94mE R \e[34mI U \e[90mM"
 echo -e "\e[39m"
