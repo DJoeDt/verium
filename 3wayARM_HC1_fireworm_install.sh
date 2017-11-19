@@ -36,6 +36,11 @@ echo "nice --15 /root/verium/3wayminer/cpuminer -o stratum+tcp://stratum.beerten
 echo "" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 echo "" >> /etc/rc.local
+echo "cat /sys/devices/virtual/thermal/thermal_zone0/temp >> ~/verium/cpu_temp.log" > ~/verium/templog.sh
+chmod +x ~/verium/templog.sh
+echo "*/10 * *   *   *  /root/verium/templog.sh"
+sleep 10
+crontab -e
 echo -e "\e[92mVerium Guide 6/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
 echo -e "\e[91mALL YOUR HASHES ARE BELONG TO US!!11 ;)\e[39m"
 echo -e "\e[92mNow get \e[91myour wallets address \e[93mhit Ctrl+Cand mine for yourself!\n\e[39m"
