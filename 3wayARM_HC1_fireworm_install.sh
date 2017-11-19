@@ -32,7 +32,7 @@ sudo echo "/var/swapfile    none    swap    sw    0    0" >> /etc/fstab
 echo "In /media/boot/boot.ini setenv ddr_freq 933"
 sed -i -e 's/setenv ddr_freq 825/setenv ddr_freq 933/g' /media/boot/boot.ini
 sed -i -e 's/exit 0//g' /etc/rc.local
-echo "nice --15 /root/verium/3wayminer/cpuminer -o stratum+tcp://stratum.beertendr.com:3334 -O joe_rondx.111:x --cpu-priority 4 -t 2 --cpu-affinity 0x00F0 --api-bind 0.0.0.0:4048 --no-color >> /root/verium/3wayminer/mine.log &" >> /etc/rc.local
+echo "nice --15 /root/verium/3wayminer/cpuminer -o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.HC1_1 -p HC1_1 --cpu-priority 4 -t 2 --cpu-affinity 0x00F0 --api-bind 0.0.0.0:4048 --no-color >> /root/verium/3wayminer/mine.log &" >> /etc/rc.local
 echo "" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 echo "" >> /etc/rc.local
