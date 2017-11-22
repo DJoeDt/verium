@@ -7,11 +7,11 @@ mkdir ~/verium
 echo -e "\e[92mVerium Guide 3/6: \e[93mClone miner source code into ~/verium/miner\e[39m"
 git clone https://github.com/fireworm71/veriumMiner.git ~/verium/1wayminer
 echo -e "\e[92mVerium Guide 4/6: \e[93mConfigure Algorithm\e[39m"
-sed -i -e 's/#define SCRYPT_MAX_WAYS 3/#define SCRYPT_MAX_WAYS 1/g' ~/verium/miner/algo/scrypt.c
-sed -i -e 's/#define HAVE_SCRYPT_3WAY 1/\/\/#define HAVE_SCRYPT_3WAY 1/g' ~/verium/miner/algo/scrypt.c
-sed -i -e 's/#define scrypt_best_throughput() 3/#define scrypt_best_throughput() 1/g' ~/verium/miner/algo/scrypt.c
-sed -i -e 's/void scrypt_core_3way/void scrypt_core /g' ~/verium/miner/algo/scrypt.c
-sed -i -e 's/-DUSE_ASM -pg/-DUSE_ASM -mfpu=neon -pg/g' ~/verium/miner/build.sh
+sed -i -e 's/#define SCRYPT_MAX_WAYS 3/#define SCRYPT_MAX_WAYS 1/g' ~/verium/1wayminer/algo/scrypt.c
+sed -i -e 's/#define HAVE_SCRYPT_3WAY 1/\/\/#define HAVE_SCRYPT_3WAY 1/g' ~/verium/1wayminer/algo/scrypt.c
+sed -i -e 's/#define scrypt_best_throughput() 3/#define scrypt_best_throughput() 1/g' ~/verium/1wayminer/algo/scrypt.c
+sed -i -e 's/void scrypt_core_3way/void scrypt_core /g' ~/verium/1wayminer/algo/scrypt.c
+sed -i -e 's/-DUSE_ASM -pg/-DUSE_ASM -mfpu=neon -pg/g' ~/verium/1wayminer/build.sh
 echo -e "\e[92mVerium Guide 4/6: \e[93mCompile the miner using build\e[39m"
 cd verium/1wayminer
 ./build.sh
