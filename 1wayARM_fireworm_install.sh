@@ -16,11 +16,11 @@ echo -e "\e[92mVerium Guide 4/6: \e[93mCompile the miner using build\e[39m"
 cd verium/1wayminer
 ./build.sh
 echo -e "\e[92mVerium Guide 5/6: \e[93mMiner built.\e[39m"
-sed -i -e 's/exit 0//g' /etc/rc.local
-echo "/home/pi/verium/1wayminer/cpuminer -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u joe_rondx.HC1_9 -p bwa77+HC1_9 -t 4 --api-bind 0.0.0.0:4048 --no-color >> /home/pi/verium/1wayminer/mine.log &" >> /etc/rc.local
-echo "" >> /etc/rc.local
-echo "exit 0" >> /etc/rc.local
-echo "" >> /etc/rc.local
+sudo sed -i -e 's/exit 0//g' /etc/rc.local
+sudo echo "/home/pi/verium/1wayminer/cpuminer -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u joe_rondx.HC1_9 -p bwa77+HC1_9 -t 4 --api-bind 0.0.0.0:4048 --no-color >> /home/pi/verium/1wayminer/mine.log &" >> /etc/rc.local
+sudo echo "" >> /etc/rc.local
+sudo echo "exit 0" >> /etc/rc.local
+sudo echo "" >> /etc/rc.local
 echo "cat /opt/vc/bin/vcgencmd measure_temp >> ~/verium/cpu_temp.log" > ~/verium/templog.sh
 chmod +x ~/verium/templog.sh
 echo "*/10 * *   *   *  /home/pi/verium/templog.sh"
