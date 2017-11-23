@@ -17,7 +17,7 @@ cd verium/1wayminer
 ./build.sh
 echo -e "\e[92mVerium Guide 5/6: \e[93mMiner built.\e[39m"
 sed -i -e 's/exit 0//g' /etc/rc.local
-echo "/home/pi/verium/1wayminer/cpuminer -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u joe_rondx.HC1_9 -p bwa77+HC1_9 -t 4 --api-bind 0.0.0.0:4048 --no-color >> /home/pi/verium/1wayminer/mine.log &" >> /etc/rc.local
+echo "/home/pi/verium/1wayminer/cpuminer -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u joe_rondx.RPi3 -p RPi3 --api-bind 0.0.0.0:4048 --no-color >> /home/pi/verium/1wayminer/mine.log &" >> /etc/rc.local
 echo "" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 echo "" >> /etc/rc.local
