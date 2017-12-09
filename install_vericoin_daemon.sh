@@ -10,14 +10,14 @@ cd ~/vericoin/src
 echo -e "\e[94mVeriCoin Guide 4/10: \e[93mCompile the wallet using make\e[39m"
 make -f makefile.unix
 echo -e "\e[94mVeriCoin Guide 5/10: \e[93mDownload nodes and write configuration file, edit by nano ~/vericoin/vericoin.conf\e[39m"
-wget https://www.vericoin.info/downloads/vericoin.conf
-echo " " >> ~/vericoin/src/vericoin.conf
-echo "server=1" >> ~/vericoin/src/vericoin.conf
-echo "listen=1" >> ~/vericoin/src/vericoin.conf
-echo "daemon=1" >> ~/vericoin/src/vericoin.conf
-echo "rpcuser=YourName" >> ~/vericoin/src/vericoin.conf
-echo "rpcpassword=YourPassword" >> ~/vericoin/src/vericoin.conf
-echo "rpcallowip=localhost" >> ~/vericoin/src/vericoin.conf
+cd ..
+wget https://www.vericoin.info/downloads/vericoin.conf 
+echo " " >> ~/vericoin/vericoin.conf
+echo "server=1" >> ~/vericoin//vericoin.conf
+echo "listen=1" >> ~/vericoin/vericoin.conf
+echo "daemon=1" >> ~/vericoin//vericoin.conf
+echo "rpcuser=YourName" >> ~/vericoin/vericoin.conf
+echo "rpcpassword=YourPassword" >> ~/vericoin/vericoin.conf
 ~/vericoin/src/vericoind
 echo -e "\e[94mVeriCoin Guide 5/10: \e[93mGenerating Wallet. Wait 1 min\e[39m"
 sleep 60
@@ -30,8 +30,8 @@ echo -e "\e[94mVeriCoin Guide 8/10: \e[93mto get info use ~/vericoin/src/vericoi
 ~/vericoin/src/vericoind getinfo
 echo -e "\e[94mVeriCoin Guide 9/10: \e[93mYour wallets address is:\e[39m"
 ~/vericoin/src/vericoind getaddressesbyaccount ""
-echo -e "\e[94mVeriCoin Guide 10/10: \e[94mWelcome to VeriCoin! \e[35m :)"
-echo -e "\e[34m      __"
+echo -e "\e[94mVeriCoin Guide 10/10: \e[93mWelcome to:"
+echo -e "\e[94m      "
 echo " __        __ "
 echo " \ \      / / "
 echo "  \ \    / / "
@@ -39,6 +39,6 @@ echo "   \ \  / / "
 echo "    \ \/ / "
 echo "     \  / "
 echo "      \/ "
-echo -e "\e[94mmV E R I C O I N"
+echo -e "\e[94mV E R I C O I N"
 echo -e "\e[39m"
 echo "PS.: In case you see ERRORS like -No such file... - it actually helps to run the script again since probably the installation of the dependencies failed"
