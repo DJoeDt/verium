@@ -10,26 +10,25 @@ cd ~/vericoin/src
 echo -e "\e[94mVeriCoin Guide 4/10: \e[93mCompile the wallet using make\e[39m"
 make -f makefile.unix
 echo -e "\e[94mVeriCoin Guide 5/10: \e[93mDownload nodes and write configuration file, edit by nano ~/vericoin/vericoin.conf\e[39m"
-cd ..
 wget https://www.vericoin.info/downloads/vericoin.conf 
-echo " " >> ~/vericoin/vericoin.conf
-echo "server=1" >> ~/vericoin//vericoin.conf
-echo "listen=1" >> ~/vericoin/vericoin.conf
-echo "daemon=1" >> ~/vericoin//vericoin.conf
-echo "rpcuser=YourName" >> ~/vericoin/vericoin.conf
-echo "rpcpassword=YourPassword" >> ~/vericoin/vericoin.conf
-~/vericoin/src/vericoind
+echo " " >> ~/vericoin/src/vericoin.conf
+echo "server=1" >> ~/vericoin/src/vericoin.conf
+echo "listen=1" >> ~/vericoin/src/vericoin.conf
+echo "daemon=1" >> ~/vericoin/src/vericoin.conf
+echo "rpcuser=YourName" >> ~/vericoin/src/vericoin.conf
+echo "rpcpassword=YourPassword" >> ~/vericoin/src/vericoin.conf
+./vericoind
 echo -e "\e[94mVeriCoin Guide 5/10: \e[93mGenerating Wallet. Wait 1 min\e[39m"
 sleep 60
 echo -e "\e[94mVeriCoin Guide 6/10: \e[93mDirectly download the Blockchain for speed up...\e[39m"
 ./vericoind bootstrap false
 echo -e "\e[94mVeriCoin Guide 7/10: \e[93mBlockchain update complete, restarting wallet, wait 2 min\e[39m"
-~/vericoin/src/vericoind
+./vericoind
 sleep 120
 echo -e "\e[94mVeriCoin Guide 8/10: \e[93mto get info use ~/vericoin/src/vericoind getinfo\e[39m" 
-~/vericoin/src/vericoind getinfo
+./vericoind getinfo
 echo -e "\e[94mVeriCoin Guide 9/10: \e[93mYour wallets address is:\e[39m"
-~/vericoin/src/vericoind getaddressesbyaccount ""
+./vericoind getaddressesbyaccount ""
 echo -e "\e[94mVeriCoin Guide 10/10: \e[93mWelcome to:"
 echo -e "\e[94m      "
 echo " __        __ "
