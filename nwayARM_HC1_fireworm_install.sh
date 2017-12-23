@@ -26,7 +26,7 @@ sudo chmod 600 /var/swapfile
 sudo mkswap /var/swapfile
 sudo swapon /var/swapfile
 sudo echo "/var/swapfile    none    swap    sw    0    0" >> /etc/fstab
-echo -e "\e[92mOdroid Specials 2/4 : \e[93mOvreclock RAM by setenv ddr_freq 933 in /media/boot/boot.ini\e[39m"
+echo -e "\e[92mOdroid Specials 2/4 : \e[93mMaximal RAM speed by setenv ddr_freq 933 in /media/boot/boot.ini\e[39m"
 sed -i -e 's/setenv ddr_freq 825/setenv ddr_freq 933/g' /media/boot/boot.ini
 echo -e "\e[92mOdroid Specials 3/4 : \e[93mConfigure CPU temperature logging.\e[39m"
 echo "cat /sys/devices/virtual/thermal/thermal_zone0/temp >> ~/verium/cpu_temp.log" > ~/verium/templog.sh
@@ -45,14 +45,17 @@ echo "exit 0" >> /etc/rc.local
 echo "" >> /etc/rc.local
 echo -e "\e[92mVerium Guide 7/6: \e[93mTesting the miner with a little joke... ;) \e[39m"
 echo -e "\e[91mALL YOUR HASHES ARE BELONG TO US!!11 ;)\e[39m"
-echo -e "\e[92mNow get \e[91myour wallets address \e[93mhit Ctrl+C and mine for yourself!\n\e[39m"
-./cpuminer -o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.Guide -p GuidePwd -t 2 -1 6 
-echo -e "\e[92mHappy Verium Mining! \e[35m :)"
+echo "Well, you may keep this running for a while as donation. Thanks! <3"
+echo -e "\e[92mThen get \e[91myour wallets address \e[93mhit Ctrl+C and mine for yourself!\n\e[39m"
+./cpuminer -o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.Guide -p GuidePwd -t 2 -1 6 --cpu-affinity-stride 1 --cpu-affinity-default-index 6 --cpu-affinity-oneway-index 0
+echo -e "\e[92mHappy Verium Mining! \e[35m joe_rondx :)"
 echo -e "      \e[94m_\e[34m_"
 echo -e "  \e[37m_  \e[94m/  \e[34m\  \e[90m_"
 echo -e ' \e[37m/| \e[94m(    \e[34m) \e[90m|\ '
 echo -e "\e[37m( (  \e[94m\  \e[34m/  \e[90m) )"
-echo -e " \e[37m\ \  \e[94m\\e[34m/  \e[90m/ /"
+echo -en "\e[37m \ \ \e[94m"
+echo -n ' \'
+echo -e "\e[34m/  \e[90m/ /"
 echo -e "  \e[37m\ \    \e[90m/ /"
 echo -e "   \e[37m\ \  \e[90m/ /"
 echo -e "    \e[37m\ -\e[90m- /"
