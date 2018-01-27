@@ -5,19 +5,13 @@ sudo apt-get install git automake autoconf pkg-config libcurl4-openssl-dev libja
 echo -e "\e[92mVerium Guide 3/6: \e[93mCreating verium directory\e[39m"
 mkdir ~/verium
 echo -e "\e[92mVerium Guide 3/6: \e[93mClone miner source code into ~/verium/miner\e[39m"
-git clone https://github.com/fireworm71/veriumMiner.git ~/verium/1wayminer
-echo -e "\e[92mVerium Guide 4/6: \e[93mConfigure Algorithm\e[39m"
-sed -i -e 's/#define SCRYPT_MAX_WAYS 3/#define SCRYPT_MAX_WAYS 1/g' ~/verium/1wayminer/algo/scrypt.c
-sed -i -e 's/#define HAVE_SCRYPT_3WAY 1/\/\/#define HAVE_SCRYPT_3WAY 1/g' ~/verium/1wayminer/algo/scrypt.c
-sed -i -e 's/#define scrypt_best_throughput() 3/#define scrypt_best_throughput() 1/g' ~/verium/1wayminer/algo/scrypt.c
-sed -i -e 's/void scrypt_core_3way/void scrypt_core /g' ~/verium/1wayminer/algo/scrypt.c
-sed -i -e 's/-DUSE_ASM -pg/-DUSE_ASM -mfpu=neon -pg/g' ~/verium/1wayminer/build.sh
+git clone https://github.com/fireworm71/veriumMiner.git ~/verium/fireworm
 echo -e "\e[92mVerium Guide 4/6: \e[93mCompile the miner using build\e[39m"
-cd verium/1wayminer
+cd verium/fireworm
 ./build.sh
 echo -e "\e[92mVerium Guide 5/6: \e[93mMiner built.\e[39m"
 sed -i -e 's/exit 0//g' /etc/rc.local
-echo "/home/pi/verium/1wayminer/cpuminer -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u joe_rondx.RPi3 -p RPi3 --api-bind 0.0.0.0:4048 --no-color >> /home/pi/verium/1wayminer/mine.log &" >> /etc/rc.local
+echo "/home/pi/verium/1wayminer/cpuminer -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u joe_rondx.RPi3 -p joe -1 4 --api-bind 0.0.0.0:4048 --no-color >> /home/pi/verium/fireworm/mine.log &" >> /etc/rc.local
 echo "" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 echo "" >> /etc/rc.local
@@ -42,16 +36,18 @@ sdram_schmoo=0x02000020
 over_voltage_sdram_p=6
 over_voltage_sdram_i=4
 over_voltage_sdram_c=4"
-echo -e "\e[92mHappy Verium Mining! \e[35m :)"
-echo -e "\e[34m      __"
-echo "  _  /  \  _"
-echo " /| (    ) |\ "
-echo "( (  \  /  ) )"
-echo " \ \  \/  / /"
-echo "  \ \    / /"
-echo "   \ \  / /"
-echo "    \ -- /"
-echo "     \  /"
-echo "      --"
-echo -e "  \e[37mV \e[94mE R \e[34mI U \e[90mM"
+echo -e "\e[92mHappy Verium Mining! \e[35m joe_rondx :)"
+echo -e "      \e[94m_\e[34m_"
+echo -e "  \e[37m_  \e[94m/  \e[34m\  \e[90m_"
+echo -e ' \e[37m/| \e[94m(    \e[34m) \e[90m|\ '
+echo -e "\e[37m( (  \e[94m\  \e[34m/  \e[90m) )"
+echo -en "\e[37m \ \ \e[94m"
+echo -n ' \'
+echo -e "\e[34m/  \e[90m/ /"
+echo -e "  \e[37m\ \    \e[90m/ /"
+echo -e "   \e[37m\ \  \e[90m/ /"
+echo -e "    \e[37m\ -\e[90m- /"
+echo -e "     \e[37m\  \e[90m/"
+echo -e "      \e[37m-\e[90m-"
+echo -e "\e[90m  V E R I U M"
 echo -e "\e[39m"
