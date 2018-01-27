@@ -33,7 +33,7 @@ over_voltage_sdram_i=4
 over_voltage_sdram_c=4"
 echo "Autostart config:"
 echo "sudo nano /etc/rc.local"
-echo "/home/pi/verium/fireworm/cpuminer -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u joe_rondx.RPi3 -p joe -1 4 --api-bind 0.0.0.0:4048 --no-color >> /home/pi/verium/fireworm/mine.log &" >> /etc/rc.local
+echo "/home/pi/verium/fireworm/cpuminer -o stratum+tcp://eu.vrm.mining-pool.ovh:3032 -u joe_rondx.RPi3 -p joe -1 4 --api-bind 0.0.0.0:4048 --no-color >> /home/pi/verium/fireworm/mine.log &"
 echo "before exit 0"
 echo -e "\e[92mHappy Verium Mining! \e[35m joe_rondx :)"
 echo -e "      \e[94m_\e[34m_"
