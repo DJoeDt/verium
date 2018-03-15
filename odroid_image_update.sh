@@ -7,7 +7,7 @@ cd verium/fireworm
 ./build.sh
 echo -e "\e[92mVerium Guide 4/6: \e[93mMiner built.\e[39m"
 sed -i -e 's/"1way Miner: -----------------------------"//g' ~/vrmcheck.sh
-sed -i -e 's/tail verium/nwayminer/1waymine.log//g' ~/vrmcheck.sh
+sed -i -e 's/tail verium\/nwayminer\/1waymine.log//g' ~/vrmcheck.sh
 sed -i -e 's/nwayminer/fireworm/g' ~/vrmcheck.sh
 echo -e "\e[92mVerium Guide 5/6: \e[93mAdding One-Miner configuration to Autostart\e[39m"
 sed -i -e 's/exit 0//g' /etc/rc.local
