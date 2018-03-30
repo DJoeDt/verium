@@ -18,8 +18,8 @@ echo "daemon=1" >> ~/vericoin/src/vericoin.conf
 echo "rpcuser=YourName" >> ~/vericoin/src/vericoin.conf
 echo "rpcpassword=YourPassword" >> ~/vericoin/src/vericoin.conf
 ./vericoind
-echo -e "\e[94mVeriCoin Guide 5/10: \e[93mGenerating Wallet. Wait 1 min\e[39m"
-sleep 60
+echo -e "\e[94mVeriCoin Guide 5/10: \e[93mGenerating Wallet. Wait 2 min\e[39m"
+sleep 120
 echo -e "\e[94mVeriCoin Guide 6/10: \e[93mDirectly download the Blockchain for speed up...\e[39m"
 ./vericoind bootstrap false
 echo -e "\e[94mVeriCoin Guide 7/10: \e[93mBlockchain update complete, restarting wallet, wait 2 min\e[39m"
