@@ -13,10 +13,8 @@ echo -e "\e[92mVerium Guide 5/6: \e[93mAdding One-Miner configuration to Autosta
 sed -i -e 's/exit 0//g' /etc/rc.local
 echo "# New One-Miner configuration:" >> /etc/rc.local
 echo "nice --10 /root/verium/fireworm/cpuminer \ " >> /etc/rc.local
-echo "-o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.UpdateOdroid -p joe \ " >> /etc/rc.local
-echo "-1 5 -t 3 --cpu-affinity-stride 1 --cpu-affinity-default-index 5 --cpu-affinity-oneway-index 0 \ " >> /etc/rc.local
-echo "--cpu-priority 2 \ " >> /etc/rc.local
-echo "--api-bind 0.0.0.0:4048 --no-color >> /root/verium/fireworm/3waymine.log &" >> /etc/rc.local
+echo "-o stratum+tcp://pool-eu.bloxstor.com:3003 -u VEXMki29ycW5vSt3MmdM5iwHqsHux91EMr.UpdateOdroid -p joe_rondx \ " >> /etc/rc.local
+echo "-1 5 -t 3 --cpu-affinity-stride 1 --cpu-affinity-default-index 5 --cpu-affinity-oneway-index 0 --cpu-priority 2 --api-bind 0.0.0.0:4048 --no-color >> /root/verium/fireworm/3waymine.log &" >> /etc/rc.local
 echo "" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 echo "" >> /etc/rc.local
